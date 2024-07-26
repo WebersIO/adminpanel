@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <div class="container flex">
+        <div class="slide-bar border ">
+            <div class="slide-one border flex-col">
+                <div class="slide-icon">
+                    <i class="fa-brands fa-vaadin"></i>
+                </div>
+                <div class="slide-a">
+                    <h2>ADMIN</h2>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+
+                <div class="slide-icon">
+                    <i class="fa-solid fa-house-chimney"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Dashboard</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+                <div class="slide-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> E-mail</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+                <div class="slide-icon">
+                    <i class="fa-solid fa-feather"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Compose</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+                <div class="slide-icon">
+                    <i class="fa-regular fa-calendar"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Calander</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+
+                <div class="slide-icon">
+                    <i class="fa-regular fa-message"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Chat</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+
+                <div class="slide-icon">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Charts</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+
+                <div class="slide-icon">
+                    <i class="fa-brands fa-wpforms"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Forms</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+
+                <div class="slide-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> UI Elements</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+                <div class="slide-icon">
+                    <i class="ri-list-check-2"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Tables</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+
+                <div class="slide-icon">
+                    <i class="ri-map-2-line"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Maps</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+
+                <div class="slide-icon">
+                    <i class="ri-file-copy-line"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Pages</a>
+                </div>
+            </div>
+            <div class="slide-links border flex">
+
+                <div class="slide-icon">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Levels</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="slide-two-hor border">
+            <nav>
+                <div class="nav-left">
+                    <button class="hid-btn p-20" id="hid"><i class="fa-solid fa-bars"></i></button>
+                    <i class="ri-search-line p-20"></i>
+                </div>
+
+
+                <div class="nav-right ">
+                    <i class="fa-regular fa-bell p-20"></i>
+                    <i class="fa-regular fa-envelope p-20"></i>
+
+                    <div class="profile p-20">
+                        <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="" class="profile-img m-right">
+                        <h4>John Doe</h4>
+                    </div>
+                </div>
+            </nav>
+
+
+            <div class="container-xl">
+                
+            </div>
+
+            <div class="container-xl content">
+                <div class="respo border">
+                    <div class="map border">
+                        1
+                    </div>
+                </div>
+                <div class="respo border">
+                    <div class="map border">
+                        1
+                    </div>
+                </div>
+                <div class="respo border">
+                    <div class="map border">
+                        1
+                    </div>
+                </div>
+                <div class="respo border">
+                    <div class="map border">
+                        1
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script>
+        $("#hid").click(function () {
+            $(".slide-a").toggleClass("hide-slide");
+            $(".slide-bar a").toggle()
+            $(".slide-bar h2").toggle()
+        })
+    </script>
+</body>
+
+
+</html>
