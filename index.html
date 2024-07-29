@@ -145,7 +145,8 @@
                     <i class="fa-regular fa-envelope p-20"></i>
 
                     <div class="profile p-20">
-                        <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="" class="profile-img m-right">
+                        <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt=""
+                            class="profile-img m-right splash">
                         <h4>John Doe</h4>
                     </div>
                 </div>
@@ -153,7 +154,7 @@
 
 
             <div class="container-xl">
-                
+
             </div>
 
             <div class="container-xl content">
@@ -164,12 +165,14 @@
                 </div>
                 <div class="respo border">
                     <div class="map border">
-                        1
+                        <div id="chart">
+                            <i class="ri-git-commit-fill"></i> this data is in the percentage (%)...
+                        </div>
                     </div>
                 </div>
                 <div class="respo border">
                     <div class="map border">
-                        1
+                        <canvas id="myChart"></canvas>
                     </div>
                 </div>
                 <div class="respo border">
@@ -181,18 +184,141 @@
 
 
         </div>
+        <div class="pop-up">
+            <div class="respo-pop">
+                <div class="profile-page">
+                    <div class="profile-imge">
+                        <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="admin-profile">
+                    </div>
 
+                    <div class="main-stats">
+                        <div class="earnings">
+                            <h3>$3250</h3>
+                            <p>Balance</p>
+                        </div>
+                        <div class="earnings">
+                            <h3>+2345</h3>
+                            <p>User</p>
+                        </div>
+                        <div class="earnings">
+                            <h3>45,423</h3>
+                            <p>Visits</p>
+                        </div>
+                    </div>
+
+                    <div class="admin-btn">
+                        <button class="log-btn"><i class="ri-logout-box-line"></i> &nbsp;Log-out</button>
+                        <button class="log-btn"><i class="ri-login-box-line"></i> &nbsp; Sign-in</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 
 
+
+
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
     <script>
         $("#hid").click(function () {
             $(".slide-a").toggleClass("hide-slide");
             $(".slide-bar a").toggle()
             $(".slide-bar h2").toggle()
         })
+
+
+        $(".splash").click(function () {
+            $(".pop-up").slideToggle();
+        })
+
+        
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script>
+        const ctx = document.getElementById('myChart');
+
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'mar', 'apr', 'may', 'jun'],
+                datasets: [{
+                    label: 'Users',
+                    data: [12000, 19000, 300, 5000, 2000, 3000],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script>
+
+
+        var options = {
+            series: [90, 3, 2, 5],
+            label: 'in %',
+            chart: {
+                height: 390,
+                type: 'radialBar',
+            },
+            plotOptions: {
+                radialBar: {
+                    offsetY: 0,
+                    startAngle: 0,
+                    endAngle: 270,
+                    hollow: {
+                        margin: 5,
+                        size: '30%',
+                        background: 'transparent',
+                        image: undefined,
+                    },
+                    dataLabels: {
+                        name: {
+                            show: false,
+                        },
+                        value: {
+                            show: false,
+                        }
+                    },
+                    barLabels: {
+                        enabled: true,
+                        useSeriesColors: true,
+                        offsetX: -8,
+                        fontSize: '16px',
+                        formatter: function (seriesName, opts) {
+                            return seriesName + ":  " + opts.w.globals.series[opts.seriesIndex]
+                        },
+                    },
+                }
+            },
+            colors: ['#1ab7ea', '#0084ff', '#39539E', '#0077B5'],
+            labels: ['India', 'Indonasia', 'USA', 'Bangladesh'],
+            responsive: [{
+                breakpoint: 480,
+                options: {
+                    legend: {
+                        show: false
+                    }
+                }
+            }]
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+
+
     </script>
 </body>
 
