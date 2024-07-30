@@ -7,9 +7,10 @@
     <title>Admin panel</title>
     <link rel="stylesheet" href="/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+
+
+
 
 </head>
 
@@ -18,7 +19,7 @@
         <div class="slide-bar border ">
             <div class="slide-one border flex-col">
                 <div class="slide-icon">
-                    <i class="fa-brands fa-vaadin"></i>
+
                 </div>
                 <div class="slide-a">
                     <h2>ADMIN</h2>
@@ -141,7 +142,7 @@
 
 
                 <div class="nav-right ">
-                    <i class="fa-regular fa-bell p-20"></i>
+                    <i class="fa-regular fa-bell p-20 splash-noti"></i>
                     <i class="fa-regular fa-envelope p-20"></i>
 
                     <div class="profile p-20">
@@ -153,20 +154,100 @@
             </nav>
 
 
-            <div class="container-xl">
+            <div class="container-xl analytics">
+                <div class="dash-stats">
+                    <div class="respo-dash">
+                        <div class="left-side-column">
+                            <p>Total Views</p>
+                            <i class="ri-bar-chart-grouped-line"></i>
+                        </div>
+                        <div class="right-side-column">
+                            +10%
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-stats">
+                    <div class="respo-dash">
+                        <div class="left-side-column">
+                            <p>Total Page Views</p>
+                            <i class="ri-bar-chart-grouped-line"></i>
+                        </div>
+                        <div class="right-side-column">
+                            -7%
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-stats">
+                    <div class="respo-dash">
+                        <div class="left-side-column">
+                            <p>Unique Visitor</p>
+                            <i class="ri-bar-chart-grouped-line"></i>
+                        </div>
+                        <div class="right-side-column">
+                            ~12%
+                        </div>
+                    </div>
+                </div>
+                <div class="dash-stats">
+                    <div class="respo-dash">
+                        <div class="left-side-column">
+                            <p>Bounce Rate</p>
+                            <i class="ri-bar-chart-grouped-line"></i>
+                        </div>
+                        <div class="right-side-column">
+                            33%
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
             <div class="container-xl content">
                 <div class="respo border">
                     <div class="map border">
-                        1
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52856920.36508397!2d-161.63594246053597!3d36.04152347094136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sin!4v1722340631922!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="respo border">
                     <div class="map border">
-                        <div id="chart">
-                            <i class="ri-git-commit-fill"></i> this data is in the percentage (%)...
+                        <div class="from-country">
+                            <div class="country">
+                                <h4>100k</h4>
+                                <p>Visitors From USA</p>
+                            </div>
+                            <div class="progress">
+                                <div id="container1"></div>
+                            </div>
+                        </div>
+                        <div class="from-country">
+                            <div class="country">
+                                <h4>1M</h4>
+                                <p>Visitors From Europe</p>
+                            </div>
+                            <div class="progress">
+                                <div id="container2"></div>
+                            </div>
+                        </div>
+                        <div class="from-country">
+                            <div class="country">
+                                <h4>450k</h4>
+                                <p>Visitors From Australia</p>
+                            </div>
+                            <div class="progress">
+                                <div id="container3"></div>
+                            </div>
+                        </div>
+                        <div class="from-country">
+                            <div class="country">
+                                <h4>1B</h4>
+                                <p>Visitors From India</p>
+                            </div>
+                            <div class="progress">
+                                <div id="container4"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -177,7 +258,9 @@
                 </div>
                 <div class="respo border">
                     <div class="map border">
-                        1
+                        <div id="chart">
+                            <i class="ri-git-commit-fill"></i> this data is in the percentage (%)...
+                        </div>
                     </div>
                 </div>
             </div>
@@ -213,11 +296,56 @@
                 </div>
             </div>
         </div>
+
+
+        <div class="noti-pop-up">
+            <div class="respo-pop">
+                <div class="noti-page">
+                    <div class="notification">
+                        <i class="ri-notification-line"></i> &nbsp;&nbsp;
+                        notification
+                    </div>
+                    <hr>
+                    <div class="noti-box">
+                        <div class="noti-imge">
+                            <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="admin-profile">
+                        </div>
+
+                        <div class="admin-noti">
+                            <p><b>John Doe</b>&nbsp;liked your post</p>
+                            <p>3 mins ago</p>
+                        </div>
+
+                    </div>
+                    <div class="noti-box">
+                        <div class="noti-imge">
+                            <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="admin-profile">
+                        </div>
+
+                        <div class="admin-noti">
+                            <p><b>moo Doe</b>&nbsp;liked your post</p>
+                            <p>3 mins ago</p>
+                        </div>
+
+                    </div>
+                    <div class="noti-box">
+                        <div class="noti-imge">
+                            <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="admin-profile">
+                        </div>
+
+                        <div class="admin-noti">
+                            <p><b>Lee Doe</b>&nbsp;liked your post</p>
+                            <p>3 mins ago</p>
+                        </div>
+
+                    </div>
+                    <div class="notification">
+                        <a href="#">View All Notifications &nbsp;&nbsp; <i class="ri-arrow-right-s-line"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
-
-
-
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
@@ -233,7 +361,12 @@
             $(".pop-up").slideToggle();
         })
 
-        
+        $(".splash-noti").click(function () {
+            $(".noti-pop-up").slideToggle();
+            $(".noti-pop-up").css("display", "flex");
+        })
+
+
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -247,7 +380,7 @@
                 labels: ['Jan', 'Feb', 'mar', 'apr', 'may', 'jun'],
                 datasets: [{
                     label: 'Users',
-                    data: [12000, 19000, 300, 5000, 2000, 3000],
+                    data: [12000, 11000, 300, 5000, 2000, 3000],
                     borderWidth: 1
                 }]
             },
@@ -319,6 +452,62 @@
         chart.render();
 
 
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/progressbar.js/1.1.1/progressbar.min.js"></script>
+    <script>
+        // progressbar.js@1.0.0 version is used
+        // Docs: http://progressbarjs.readthedocs.org/en/1.0.0/
+
+        var bar = new ProgressBar.Line(container1, {
+            strokeWidth: 5,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#673ab7',
+            trailColor: '#e8f5e9',
+            trailWidth: 5,
+            value: 'translate(-50%, -50%)',
+            progress: '50',
+            svgStyle: { width: '100%', height: '5px' }
+        });
+
+        bar.animate(1.0);
+        var bar = new ProgressBar.Line(container2, {
+            strokeWidth: 3,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#4caf50',
+            trailColor: '#e8f5e9',
+            trailWidth: 5,
+            progress: '50',
+            svgStyle: { width: '100%', height: '5px' }
+        });
+
+        bar.animate(1.0);
+        var bar = new ProgressBar.Line(container3, {
+            strokeWidth: 3,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#03a9f4',
+            trailColor: '#e8f5e9',
+            trailWidth: 5,
+            progress: '50%',
+            svgStyle: { width: '100%', height: '5px' }
+        });
+
+        bar.animate(1.0);
+        var bar = new ProgressBar.Line(container4, {
+            strokeWidth: 3,
+            easing: 'easeInOut',
+            duration: 1400,
+            color: '#607d8b',
+            trailColor: '#e8f5e9',
+            trailWidth: 5,
+            progress: '50',
+            svgStyle: { width: '100%', height: '5px' }
+        });
+
+        bar.animate(1.0);
     </script>
 </body>
 
