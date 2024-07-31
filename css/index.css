@@ -187,9 +187,30 @@ nav {
 }
 
 .respo {
-  padding: 10px;
+  padding: 50px;
+  background-color: white;
+  border: 1px solid gainsboro;
+}
+
+.respo1 {
+  padding: 3px 0px;
+  height:61%;
+  width: 60%;
+}
+
+.respo2 {
+  width: 40%;
+  padding: 20px;
+  height: 60%;
+}
+
+.respo3 {
   width: 50%;
-  height: 450px;
+  padding: 20px;
+}
+.respo4 {
+  width: 50%;
+  padding: 20px;
 }
 
 .respo-dash {
@@ -204,7 +225,6 @@ nav {
 .map {
   width: 100%;
   height: 100%;
-  border: 1px solid gainsboro;
   background-color: white;
 }
 
@@ -352,21 +372,86 @@ nav {
   color: #88919f;
 }
 
+.font-gain {
+  color: #88919f;
+}
 .slide-a > a {
   color: #88919f;
 }
 
 .from-country {
-    display: flex;
-    justify-content: left;
-    flex-direction: column;
-    padding: 12px;
-    color:#72778f;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  padding: 12px;
+  color: #72778f;
+}
+
+.circle {
+  display: flex;
+  padding: 30px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.circle-progress {
+  display: flex;
+  width: 100%;
+  
+  border-top: 1px solid gainsboro;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#container5 {
+  margin:0px 20px;
+  width: 100%;
+  position: relative;
+}
+
+#container5 > svg > path:first-child{
+  stroke-dasharray: 301.635, 301.635 !important;
 }
 
 
+#container5 > svg > path:last-child{
+  stroke-dasharray: 290.635, 301.635 !important;
+}
+
+#container6 {
+  margin:0px 20px;
+  width: 100%;
+  position: relative;
+}
+
+#container6 > svg > path:first-child{
+  stroke-dasharray: 150.635, 301.635 !important;
+}
 
 
+#container6 > svg > path:last-child{
+  stroke-dasharray: 150.635, 301.635 !important;
+}
+#container7 {
+  margin:0px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#container7 > svg > path:first-child{
+  stroke-dasharray: 225.635, 301.635 !important;
+}
+
+
+#container7 > svg > path:last-child{
+  stroke-dasharray: 225.635, 301.635 !important;
+}
 
 @media (max-width: 768px) {
   .respo {
