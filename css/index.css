@@ -59,6 +59,10 @@
   color: black;
 }
 
+.slide-links a:hover {
+  color: black;
+}
+
 .slide-icon {
   width: 30px;
   display: inline-block;
@@ -180,6 +184,10 @@ nav {
   font-size: 30px;
 }
 
+.left-side-column > stat:first-child {
+  color: red;
+}
+
 .right-side-column {
   background-color: #e8f5e9;
   padding: 5px 10px;
@@ -187,20 +195,17 @@ nav {
 }
 
 .respo {
-  padding: 50px;
   background-color: white;
-  border: 1px solid gainsboro;
 }
 
 .respo1 {
   padding: 3px 0px;
-  height:61%;
+  height: 61%;
   width: 60%;
 }
 
 .respo2 {
   width: 40%;
-  padding: 20px;
   height: 60%;
 }
 
@@ -209,6 +214,11 @@ nav {
   padding: 20px;
 }
 .respo4 {
+  width: 50%;
+  padding: 20px;
+}
+
+.respo5 {
   width: 50%;
   padding: 20px;
 }
@@ -400,43 +410,41 @@ nav {
 .circle-progress {
   display: flex;
   width: 100%;
-  
+
   border-top: 1px solid gainsboro;
   justify-content: space-evenly;
   align-items: center;
 }
 
 #container5 {
-  margin:0px 20px;
+  margin: 0px 20px;
   width: 100%;
   position: relative;
 }
 
-#container5 > svg > path:first-child{
+#container5 > svg > path:first-child {
   stroke-dasharray: 301.635, 301.635 !important;
 }
 
-
-#container5 > svg > path:last-child{
+#container5 > svg > path:last-child {
   stroke-dasharray: 290.635, 301.635 !important;
 }
 
 #container6 {
-  margin:0px 20px;
+  margin: 0px 20px;
   width: 100%;
   position: relative;
 }
 
-#container6 > svg > path:first-child{
+#container6 > svg > path:first-child {
   stroke-dasharray: 150.635, 301.635 !important;
 }
 
-
-#container6 > svg > path:last-child{
+#container6 > svg > path:last-child {
   stroke-dasharray: 150.635, 301.635 !important;
 }
 #container7 {
-  margin:0px 20px;
+  margin: 0px 20px;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -444,13 +452,60 @@ nav {
   position: relative;
 }
 
-#container7 > svg > path:first-child{
+#container7 > svg > path:first-child {
   stroke-dasharray: 225.635, 301.635 !important;
 }
 
-
-#container7 > svg > path:last-child{
+#container7 > svg > path:last-child {
   stroke-dasharray: 225.635, 301.635 !important;
+}
+
+.list li {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  padding: 5px;
+  justify-content: left;
+  align-items: center;
+  text-align: center;
+}
+
+.list label {
+  padding: 0px 10px;
+}
+
+.todo-main {
+  padding: 20px;
+}
+
+.tag-right {
+  display: flex;
+  flex: auto;
+  justify-content: right;
+}
+
+.radiobutton {
+  border-radius: 20px;
+  padding: 1px 10px;
+  color: white;
+  font-size: 10px;
+  float: right;
+}
+
+.radiobutton1 {
+  background-color: #4caf50;
+}
+.radiobutton2 {
+  background-color: #4caf50;
+}
+.radiobutton3 {
+  background-color: #ffeb3b;
+}
+.radiobutton4 {
+  background-color: #00bcd4;
+}
+.radiobutton5 {
+  background-color: #4caf50;
 }
 
 @media (max-width: 768px) {

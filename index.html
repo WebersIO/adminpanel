@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="/css/index.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
 
 
 
@@ -206,12 +208,12 @@
                 <div class="respo respo1">
                     <div class="map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52856920.36508397!2d-161.63594246053597!3d36.04152347094136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sin!4v1722340631922!5m2!1sen!2sin"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52856920.36508397!2d-161.63594246053597!3d36.04152347094136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x54eab584e432360b%3A0x1c3bb99243deb742!2sUnited%20States!5e0!3m2!1sen!2sin!4v1722512560710!5m2!1sen!2sin"
                             width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-                <div class="respo respo2">
+                <div class="respo respo2 border">
                     <div class="map">
                         <div class="from-country">
                             <div class="country">
@@ -273,19 +275,78 @@
                     </div>
 
                 </div>
-                <div class="respo respo3 ">
+                <div class="respo respo3 border">
                     <div class="map">
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
-                <div class="respo respo4">
+
+
+                <div class="respo respo5 border">
+                    <div class="map">
+                        <div class="todo-main">
+                            <h4 class="font-gain">To-do List</h4>
+                            <div class="respo-todo">
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <input type="radio" id="fast" name="selector">
+                                            <label for="fast">Call John for Dinner</label>
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="fast" name="selector">
+                                            <label for="fast">Book Boss Flight</label>
+                                            <div class="tag-right">
+                                                <div class="radiobutton1 radiobutton">2 Days</div>
+                                            </div>
+
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="fast" name="selector">
+                                            <label for="fast">Hit the Gym</label>
+                                            <div class="tag-right">
+                                                <div class="radiobutton2 radiobutton">
+                                                    3 Minutes</div>
+                                            </div>
+
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="medium" name="selector">
+                                            <label for="medium">Give Purchase Report</label>
+                                            <div class="tag-right">
+                                                <div class="radiobutton3 radiobutton">not important</div>
+                                            </div>
+
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="slow" name="selector">
+                                            <label for="slow">Watch Game of Thrones Episode</label>
+                                            <div class="tag-right">
+                                                <div class="radiobutton4 radiobutton">Tomorrow</div>
+                                            </div>
+
+                                        </li>
+                                        <li>
+                                            <input type="radio" id="slow" name="selector">
+                                            <label for="slow">Give Purchase report</label>
+                                            <div class="tag-right">
+                                                <div class="radiobutton5 radiobutton">Done</div>
+                                            </div>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="respo respo4 border">
                     <div class="map">
                         <div id="chart">
                             <p></p><i class="ri-git-commit-fill"></i>&nbsp; this data is in the percentage (%)...</p>
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="pop-up">
                 <div class="respo-pop">
@@ -366,6 +427,50 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
