@@ -629,9 +629,16 @@ nav {
     align-items: center;
   }
 
+  .respo1 {
+    height: 500px;
+  }
+
+  .respo2 {
+    height: auto;
+  }
 }
 
-@media (max-width:425px) {
+@media (max-width: 425px) {
   .analytics {
     display: flex;
     flex-wrap: wrap;
@@ -643,6 +650,22 @@ nav {
     width: 90%;
     padding: 10px;
   }
+
+  .pop-up {
+    right: 0%;
+    width: 100%;
+  }
+
+  .noti-pop-up {
+    right: 0%;
+    width: 100%;
+  }
+
+  .admin-btn {
+    width: 100%;
+  }
+
+  
 }
 
 @media (max-width: 1500px) {
