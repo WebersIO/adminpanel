@@ -18,25 +18,25 @@
 
 <body>
     <div class="container flex">
-        <div class="slide-bar border ">
-            <div class="slide-one border flex-col">
-                <div class="slide-icon">
-
+        <div class="slide-bar border">
+            <div class="slide-one border ">
+                <div class="slide-img">
+                    <img src="https://colorlib.com/polygon/adminator/assets/static/images/logo.png" alt="">
                 </div>
-                <div class="slide-a">
-                    <h2>ADMIN</h2>
+                <div class="slide-title">
+                    <h3 class="slide-h3">ADMINATOR</h3>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
 
                 <div class="slide-icon">
-                    <i class="fa-solid fa-house-chimney"></i>
+                    <i class="ri-home-8-line"></i>
                 </div>
                 <div class="slide-a">
                     <a href="#"> Dashboard</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
                 <div class="slide-icon">
                     <i class="fa-regular fa-envelope"></i>
                 </div>
@@ -44,7 +44,7 @@
                     <a href="#"> E-mail</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
                 <div class="slide-icon">
                     <i class="fa-solid fa-feather"></i>
                 </div>
@@ -52,7 +52,7 @@
                     <a href="#"> Compose</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
                 <div class="slide-icon">
                     <i class="fa-regular fa-calendar"></i>
                 </div>
@@ -60,7 +60,7 @@
                     <a href="#"> Calander</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
 
                 <div class="slide-icon">
                     <i class="fa-regular fa-message"></i>
@@ -69,7 +69,7 @@
                     <a href="#"> Chat</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
 
                 <div class="slide-icon">
                     <i class="fa-solid fa-chart-simple"></i>
@@ -78,7 +78,7 @@
                     <a href="#"> Charts</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
 
                 <div class="slide-icon">
                     <i class="fa-brands fa-wpforms"></i>
@@ -87,7 +87,7 @@
                     <a href="#"> Forms</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
 
                 <div class="slide-icon">
                     <i class="fa-solid fa-palette"></i>
@@ -96,7 +96,7 @@
                     <a href="#"> UI Elements</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
                 <div class="slide-icon">
                     <i class="ri-list-check-2"></i>
                 </div>
@@ -104,7 +104,7 @@
                     <a href="#"> Tables</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
 
                 <div class="slide-icon">
                     <i class="ri-map-2-line"></i>
@@ -113,7 +113,7 @@
                     <a href="#"> Maps</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
 
                 <div class="slide-icon">
                     <i class="ri-file-copy-line"></i>
@@ -122,7 +122,7 @@
                     <a href="#"> Pages</a>
                 </div>
             </div>
-            <div class="slide-links border flex">
+            <div class="slide-links flex">
 
                 <div class="slide-icon">
                     <i class="fa-solid fa-server"></i>
@@ -160,7 +160,7 @@
                 <div class="dash-stats">
                     <div class="respo-dash">
                         <div class="left-side-column">
-                            <p>Total Views</p>
+                            <p class="fw-700">Total Views</p>
                             <i class="ri-bar-chart-grouped-line"></i>
                         </div>
                         <div class="right-side-column">
@@ -171,7 +171,7 @@
                 <div class="dash-stats">
                     <div class="respo-dash">
                         <div class="left-side-column">
-                            <p>Total Page Views</p>
+                            <p class="fw-700">Total Page Views</p>
                             <i class="ri-bar-chart-grouped-line"></i>
                         </div>
                         <div class="right-side-column">
@@ -182,7 +182,7 @@
                 <div class="dash-stats">
                     <div class="respo-dash">
                         <div class="left-side-column">
-                            <p>Unique Visitor</p>
+                            <p class="fw-700">Unique Visitor</p>
                             <i class="ri-bar-chart-grouped-line"></i>
                         </div>
                         <div class="right-side-column">
@@ -193,7 +193,7 @@
                 <div class="dash-stats">
                     <div class="respo-dash">
                         <div class="left-side-column">
-                            <p>Bounce Rate</p>
+                            <p class="fw-700">Bounce Rate</p>
                             <i class="ri-bar-chart-grouped-line"></i>
                         </div>
                         <div class="right-side-column">
@@ -277,7 +277,7 @@
                 </div>
                 <div class="respo respo3 border">
                     <div class="map">
-                        <canvas id="myChart"></canvas>
+                        <canvas id="myChart">1</canvas>
                     </div>
                 </div>
 
@@ -478,9 +478,8 @@
             $("#hid").click(function () {
                 $(".slide-a").toggleClass("hide-slide");
                 $(".slide-bar a").toggle()
-                $(".slide-bar h2").toggle()
+                $(".slide-bar h3").toggle()
             })
-
 
             $(".splash").click(function () {
                 $(".pop-up").slideToggle();
@@ -517,7 +516,140 @@
                     }
                 }
             });
+
         </script>
+
+        <script>
+            var options = {
+                series: [{
+                    data: [21, 22, 10, 28, 16, 21, 13, 30]
+                }],
+                chart: {
+                    height: 350,
+                    type: 'bar',
+                    events: {
+                        click: function (chart, w, e) {
+                            // console.log(chart, w, e)
+                        }
+                    }
+                },
+                colors: colors,
+                plotOptions: {
+                    bar: {
+                        columnWidth: '45%',
+                        distributed: true,
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                legend: {
+                    show: false
+                },
+                xaxis: {
+                    categories: [
+                        ['John', 'Doe'],
+                        ['Joe', 'Smith'],
+                        ['Jake', 'Williams'],
+                        'Amber',
+                        ['Peter', 'Brown'],
+                        ['Mary', 'Evans'],
+                        ['David', 'Wilson'],
+                        ['Lily', 'Roberts'],
+                    ],
+                    labels: {
+                        style: {
+                            colors: colors,
+                            fontSize: '12px'
+                        }
+                    }
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart1"), options);
+            chart.render();
+        </script>
+
+
+
+
+        <!-- column Charts -->
+        <script>
+            var options = {
+                series: [{
+                    name: 'Servings',
+                    data: [44, 55, 41, 67, 22, 43, 21, 33, 45, 31, 87, 65, 35]
+                }],
+                annotations: {
+                    points: [{
+                        x: 'Bananas',
+                        seriesIndex: 0,
+                        label: {
+                            borderColor: '#775DD0',
+                            offsetY: 0,
+                            style: {
+                                color: '#fff',
+                                background: '#775DD0',
+                            },
+                            text: 'Bananas are good',
+                        }
+                    }]
+                },
+                chart: {
+                    height: 350,
+                    type: 'bar',
+                },
+                plotOptions: {
+                    bar: {
+                        borderRadius: 10,
+                        columnWidth: '50%',
+                    }
+                },
+                dataLabels: {
+                    enabled: false
+                },
+                stroke: {
+                    width: 0
+                },
+                grid: {
+                    row: {
+                        colors: ['#fff', '#f2f2f2']
+                    }
+                },
+                xaxis: {
+                    labels: {
+                        rotate: -45
+                    },
+                    categories: ['Apples', 'Oranges', 'Strawberries', 'Pineapples', 'Mangoes', 'Bananas',
+                        'Blackberries', 'Pears', 'Watermelons', 'Cherries', 'Pomegranates', 'Tangerines', 'Papayas'
+                    ],
+                    tickPlacement: 'on'
+                },
+                yaxis: {
+                    title: {
+                        text: 'Servings',
+                    },
+                },
+                fill: {
+                    type: 'gradient',
+                    gradient: {
+                        shade: 'light',
+                        type: "horizontal",
+                        shadeIntensity: 0.25,
+                        gradientToColors: undefined,
+                        inverseColors: true,
+                        opacityFrom: 0.85,
+                        opacityTo: 0.85,
+                        stops: [50, 0, 100]
+                    },
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart1"), options);
+            chart.render();
+
+        </script>
+
 
 
         <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
