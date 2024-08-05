@@ -116,13 +116,13 @@
 }
 
 .hide-slide {
-  width: 0px;
+  width: 50px;
   opacity: 0;
-  transition: width 300ms ease-in-out;
-  -webkit-transition: width 300ms ease-in-out;
-  -moz-transition: width 300ms ease-in-out;
-  -ms-transition: width 300ms ease-in-out;
-  -o-transition: width 300ms ease-in-out;
+  transition: width 2s ease-in-out;
+  -webkit-transition: width 2s ease-in-out;
+  -moz-transition: width 2s ease-in-out;
+  -ms-transition: width 2s ease-in-out;
+  -o-transition: width 2s ease-in-out;
 }
 
 nav {
@@ -576,6 +576,14 @@ nav {
   color: #ff9800;
 }
 
+.trans-btn {
+  transform: translateX(200px);
+  -webkit-transform: translateX(200px);
+  -moz-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  -o-transform: translateX(200px);
+}
+
 .ri-map-2-line {
   color: #b627b0;
 }
@@ -597,9 +605,24 @@ nav {
     width: 100%;
   }
 
-  .slide-bar {
-    width: 0px;
+  .noti-pop-up {
+    width: 45%;
   }
+
+  .slide-a {
+    width: 250px;
+    transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+}
+
+  .slide-bar {
+    width: 250px;
+    transition: all 2s ease-in-out;
+  }
+
 
   .analytics {
     display: flex;
@@ -679,6 +702,5 @@ nav {
     z-index: 5;
     background-color: white;
     padding: 0px 15px;
-    font-size: 25px;
   }
 }
