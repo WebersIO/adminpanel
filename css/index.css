@@ -64,9 +64,14 @@
   color: black;
 }
 
+
+.slide-links:hover {
+  background-color: #f9fafb;
+}
+
 .slide-icon {
   display: flex;
-  padding: 0px 20px;
+  padding: 0px 10px;
 }
 
 .slide-title {
@@ -76,13 +81,18 @@
 
 .slide-img {
   display: inline-block;
-
-  /* justify-content: left; */
+  transform: translateX(-20%);
+  /*justify-content: left;
+  */:;
+  -webkit-transform: translateX(-20%);
+  -moz-transform: translateX(-20%);
+  -ms-transform: translateX(-20%);
+  -o-transform: translateX(-20%);
 }
 
 .slide-a {
   overflow: hidden;
-  width: 250px;
+  width: 200px;
   padding: 0px 10px;
   transition: width 300ms ease-in-out;
   -webkit-transition: width 300ms ease-in-out;
@@ -107,29 +117,71 @@
 .hid-btn {
   padding: 10px;
   border: none;
+
   background-color: white;
   padding: 0px 15px;
   font-size: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
+ 
 }
 
-.hide-slide {
+.fix-bar{
   width: 50px;
-  opacity: 0;
-  transition: width 2s ease-in-out;
-  -webkit-transition: width 2s ease-in-out;
-  -moz-transition: width 2s ease-in-out;
-  -ms-transition: width 2s ease-in-out;
-  -o-transition: width 2s ease-in-out;
+  overflow: hidden;
+  position: fixed;
+  background-color: white;
+  height: 100vh;
+  transition: width 0.5s ease-in-out;
+  z-index: 1001;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -ms-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
+}
+
+
+
+
+.hide-slide {
+  width: 250px !important;
+  opacity: 1;
+
+  transition: width 0.5s ease-in-out;
+  -webkit-transition: width 0.5s ease-in-out;
+  -moz-transition: width 0.5s ease-in-out;
+  -ms-transition: width 0.5s ease-in-out;
+  -o-transition: width 0.5s ease-in-out;
 }
 
 nav {
-  width: 100%;
+  width:100%;
   display: flex;
+  z-index: 1000;
   align-items: center;
+  position: fixed;
+  background-color: white;
   justify-content: space-between;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.nav-left{
+  transform: translateX(50px);
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+}
+
+.nav-left-js{
+  transform: translateX(200px);
+  -webkit-transform: translateX(200px);
+  -moz-transform: translateX(200px);
+  -ms-transform: translateX(200px);
+  -o-transform: translateX(200px);
+  transition: all 0.5s ease-in-out;
 }
 
 .slide-two-hor {
@@ -139,10 +191,25 @@ nav {
   flex-direction: column;
   align-items: center;
   margin-bottom: 60px;
+  margin-left: 50px;
+  transition: margin-left 0.5s ease-in-out;
+  -webkit-transition: margin-left 0.5s ease-in-out;
+  -moz-transition: margin-left 0.5s ease-in-out;
+  -ms-transition: margin-left 0.5s ease-in-out;
+  -o-transition: margin-left 0.5s ease-in-out;
 }
+
+@media (min-width:670px){
+  
+.slide-two-hor-js{
+  margin-left:250px
+}
+}
+
 
 .nav-left {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
 }
@@ -194,7 +261,7 @@ nav {
   background-color: #f9fafb;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .dash-stats {
@@ -394,6 +461,10 @@ nav {
 
 .slide-icon > i {
   font-size: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .notification {
@@ -576,12 +647,16 @@ nav {
   color: #ff9800;
 }
 
-.trans-btn {
-  transform: translateX(200px);
-  -webkit-transform: translateX(200px);
-  -moz-transform: translateX(200px);
-  -ms-transform: translateX(200px);
-  -o-transform: translateX(200px);
+#search {
+  width: 200px;
+  padding:5px 10px;
+  border: none;
+  font-size: 20px;
+  display: none;
+}
+
+.dash-img > img {
+  background-blend-mode: overlay;
 }
 
 .ri-map-2-line {
@@ -605,12 +680,16 @@ nav {
     width: 100%;
   }
 
+  .content {
+    padding: 10px;
+  }
+
   .noti-pop-up {
     width: 45%;
   }
 
   .slide-a {
-    width: 250px;
+ 
     transition: all 1s ease-in-out;
     -webkit-transition: all 1s ease-in-out;
     -moz-transition: all 1s ease-in-out;
@@ -703,4 +782,22 @@ nav {
     background-color: white;
     padding: 0px 15px;
   }
+
 }
+
+/* 
+@media (max-width:760px){
+  .hid-btn{
+      transform: translateX(200px);
+  }
+  .trans-btn {
+  transform: translateX(0px);
+  -webkit-transform: translateX(0px);
+  -moz-transform: translateX(0px);
+  -ms-transform: translateX(0px);
+  -o-transform: translateX(0px);
+}
+
+}
+
+ */
