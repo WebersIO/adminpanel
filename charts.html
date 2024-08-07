@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin panel</title>
+    <link rel="stylesheet" href="/css/chart.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap/dist/css/jsvectormap.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/jsvectormap/dist/maps/world.js"></script>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <button class="hid-btn p-20" id="hid"><i class="fa-solid fa-bars"></i></button>
+            <i class="ri-search-line p-20" onclick="myfunction()"></i>
+
+            <div class="searchbar">
+                <input type="search" name="search" id="search" placeholder="Search...">
+            </div>
+
+
+        </div>
+
+        <div class="nav-right ">
+            <i class="fa-regular fa-bell p-20 splash-noti"></i>
+            <i class="fa-regular fa-envelope p-20"></i>
+
+            <div class="profile p-20">
+                <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="" class="profile-img m-right splash">
+                <h4>John Doe</h4>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container flex">
+        <div class="fix-bar border">
+            <div class="slide-one border ">
+                <div class="slide-img">
+                    <img src="https://colorlib.com/polygon/adminator/assets/static/images/logo.png" alt="">
+                </div>
+                <div class="slide-title">
+                    <h3 class="slide-h3">ADMINATOR</h3>
+                </div>
+            </div>
+            <div class="slide-links flex">
+
+                <div class="slide-icon">
+                    <i class="ri-home-8-line"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="/index.html"> Dashboard</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+                <div class="slide-icon">
+                    <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> E-mail</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+                <div class="slide-icon">
+                    <i class="fa-solid fa-feather"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Compose</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+                <div class="slide-icon">
+                    <i class="fa-regular fa-calendar"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="/calender.html"> Calander</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+
+                <div class="slide-icon">
+                    <i class="fa-regular fa-message"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Chat</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+
+                <div class="slide-icon">
+                    <i class="fa-solid fa-chart-simple"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="/charts.html"> Charts</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+
+                <div class="slide-icon">
+                    <i class="fa-brands fa-wpforms"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Forms</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+
+                <div class="slide-icon">
+                    <i class="fa-solid fa-palette"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> UI Elements</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+                <div class="slide-icon">
+                    <i class="ri-list-check-2"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Tables</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+
+                <div class="slide-icon">
+                    <i class="ri-map-2-line"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Maps</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+
+                <div class="slide-icon">
+                    <i class="ri-file-copy-line"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Pages</a>
+                </div>
+            </div>
+            <div class="slide-links flex">
+
+                <div class="slide-icon">
+                    <i class="fa-solid fa-server"></i>
+                </div>
+                <div class="slide-a">
+                    <a href="#"> Levels</a>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="slide-two-hor border">
+            <div class="container-xl content">
+                <div class="respo respo1">
+                    <div class="map">
+                        <canvas id="myChart1"></canvas>
+                    </div>
+                </div>
+
+                <div class="respo respo2">
+
+                    <div id="chart2"></div>
+
+                </div>
+
+                <div class="respo respo1">
+
+                    <div id="chart3"></div>
+
+                </div>
+
+                <div class="respo respo2">
+
+                    <div id="chart4"></div>
+
+                </div>
+            </div>
+
+            <div class="pop-up">
+                <div class="respo-pop">
+                    <div class="profile-page">
+                        <div class="profile-imge">
+                            <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="admin-profile">
+                        </div>
+
+                        <div class="main-stats">
+                            <div class="earnings">
+                                <h3>$3250</h3>
+                                <p>Balance</p>
+                            </div>
+                            <div class="earnings">
+                                <h3>+2345</h3>
+                                <p>User</p>
+                            </div>
+                            <div class="earnings">
+                                <h3>45,423</h3>
+                                <p>Visits</p>
+                            </div>
+                        </div>
+
+                        <div class="admin-btn">
+                            <button class="log-btn"><i class="ri-logout-box-line"></i> &nbsp;Log-out</button>
+                            <button class="log-btn"><i class="ri-login-box-line"></i> &nbsp; Sign-in</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="noti-pop-up">
+                <div class="respo-pop">
+                    <div class="noti-page">
+                        <div class="notification">
+                            <i class="ri-notification-line"></i> &nbsp;&nbsp;
+                            notification
+                        </div>
+                        <hr>
+                        <div class="noti-box">
+                            <div class="noti-imge">
+                                <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="admin-profile">
+                            </div>
+
+                            <div class="admin-noti">
+                                <p><b>John Doe</b>&nbsp;liked your post</p>
+                                <p>3 mins ago</p>
+                            </div>
+
+                        </div>
+                        <div class="noti-box">
+                            <div class="noti-imge">
+                                <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="admin-profile">
+                            </div>
+
+                            <div class="admin-noti">
+                                <p><b>moo Doe</b>&nbsp;liked your post</p>
+                                <p>3 mins ago</p>
+                            </div>
+
+                        </div>
+                        <div class="noti-box">
+                            <div class="noti-imge">
+                                <img src="https://pbs.twimg.com/media/FjU2lkcWYAgNG6d.jpg" alt="admin-profile">
+                            </div>
+
+                            <div class="admin-noti">
+                                <p><b>Lee Doe</b>&nbsp;liked your post</p>
+                                <p>3 mins ago</p>
+                            </div>
+
+                        </div>
+                        <div class="notification">
+                            <a href="#">View All Notifications &nbsp;&nbsp; <i class="ri-arrow-right-s-line"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.min.js"></script>
+        <script>
+
+            $(".ri-search-line").click(function () {
+                $("#search").fadeToggle()
+                $(".ri-search-line").toggleClass("ri-xrp-line")
+
+            })
+
+            $("#hid").click(function () {
+                $(".fix-bar").toggleClass("hide-slide");
+                $(".slide-two-hor").toggleClass("slide-two-hor-js")
+                $("nav").toggleClass("nav-left-js")
+                $(".slide-a").css("display", "block")
+            })
+
+            $(".splash").click(function () {
+                $(".pop-up").slideToggle();
+            })
+
+            $(".splash-noti").click(function () {
+                $(".noti-pop-up").slideToggle();
+                $(".noti-pop-up").css("display", "flex");
+            })
+
+
+        </script>
+
+        <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var calendarEl = document.getElementById('calendar');
+                var calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth'
+                });
+                calendar.render();
+            });
+
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            const ctx = document.getElementById('myChart1');
+
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+        <script>
+
+            var options = {
+                series: [
+                    {
+                        name: "High - 2013",
+                        data: [28, 29, 33, 36, 32, 32, 33]
+                    },
+                    {
+                        name: "Low - 2013",
+                        data: [12, 11, 14, 18, 17, 13, 13]
+                    }
+                ],
+                chart: {
+                    height: 350,
+                    type: 'line',
+                    dropShadow: {
+                        enabled: true,
+                        color: '#000',
+                        top: 18,
+                        left: 7,
+                        blur: 10,
+                        opacity: 0.2
+                    },
+                    zoom: {
+                        enabled: false
+                    },
+                    toolbar: {
+                        show: false
+                    }
+                },
+                colors: ['#77B6EA', '#545454'],
+                dataLabels: {
+                    enabled: true,
+                },
+                stroke: {
+                    curve: 'smooth'
+                },
+                title: {
+                    text: 'Average High & Low Temperature',
+                    align: 'left'
+                },
+                grid: {
+                    borderColor: '#e7e7e7',
+                    row: {
+                        colors: ['#f3f3f3', 'transparent'], // takes an array which will be repeated on columns
+                        opacity: 0.5
+                    },
+                },
+                markers: {
+                    size: 1
+                },
+                xaxis: {
+                    categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul'],
+                    title: {
+                        text: 'Month'
+                    }
+                },
+                yaxis: {
+                    title: {
+                        text: 'Temperature'
+                    },
+                    min: 5,
+                    max: 40
+                },
+                legend: {
+                    position: 'top',
+                    horizontalAlign: 'right',
+                    floating: true,
+                    offsetY: -25,
+                    offsetX: -5
+                }
+            };
+
+            var chart = new ApexCharts(document.querySelector("#chart2"), options);
+            chart.render();
+
+
+        </script>
+
+        <script>
+
+
+yours.
+Your time is valuable. Use it to focus on your app, and let us handle login (and much more).
+Try for Free Now
+Share Carbon Ad Icon
+Copy Link
+Send via email
+Refresh Carbon Ad
+ads via Carbon
+
+      
+        var options = {
+          series: [{
+          name: 'Series 1',
+          data: [80, 50, 30, 40, 100, 20],
+        }],
+          chart: {
+          height: 350,
+          type: 'radar',
+        },
+        title: {
+          text: 'Basic Radar Chart'
+        },
+        yaxis: {
+          stepSize: 20
+        },
+        xaxis: {
+          categories: ['January', 'February', 'March', 'April', 'May', 'June']
+        }
+        };
+
+        var chart = new ApexCharts(document.querySelector("#chart"), options);
+        chart.render();
+      
+      
+    
+
+
+        </script>
+
+
+
+</body>
+
+
+</html>
